@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gerador de templates</title>  
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        
+        <link rel="stylesheet" href="estyleTake.css">  
+        
+       
+    </head>
+    <body onload = "carregar()">
+        <header>
+        <h1>Respostas prontas com mensagens ativas</h1>
+        <h2>Gerador de template</h2>
+        </header>
+        <section>            
+            <div id="txt">
+                <p>Seu template contém variáveis?<br><br>              
+                  <input type="button" 
+                  title="Contém variáves {{1}}, {{2}} e etc" 
+                  class="btn btn-sem tooltip" value="Sim, com variáveis!" 
+                  onclick="comVariavel()">              
+                  <input type="button" title="Apenas texto sem variáveis" 
+                  class="btn btn-com tooltip" value="Sem vairáveis" 
+                  onclick="semVariavel()"> 
+              </div>                    
+              <div id="dd">
+                <script src="https://unpkg.com/blip-chat-widget" type="text/javascript">
+            </script>
+            <script>
+                (function () {
+                    window.onload = function () {
+                        new BlipChat()
+                        .withAppKey('ZmVlZGJhY2t0ZW1wbGF0ZTpiN2QzNjllOS05MDI0LTRhNDgtODIyYy03NjE3YjRkNjAxYTk=')
+                        .withButton({"color":"#2CC3D5","icon":""})
+                        .withCustomCommonUrl('https://marcosrodrigues-1997.chat.blip.ai/')
+                        .build();
+                    }
+                })();
+            </script>
+            </div>
+              
+            </section>
+            <footer id="footer">
+                <p>&copy; Marcos Rodrigues</p>
+                <p>
+                   
+                  <a href="https://www.linkedin.com/in/marcos-rodrigues-a1878b1a7/">LinkedIn</a> | 
+                  <a href="https://github.com/Marcos-Rodrigues-JS">GitHub</a>
+                </p>
+              </footer>
+        
+        <script src="script.js"></script>
+        <script src="scriptcomVar.js"></script>        
+    </body>
+</html>

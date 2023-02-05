@@ -1,0 +1,204 @@
+body {
+    background:  rgb(8, 8, 8);
+    font: normal 15pt Arial;
+   
+}
+
+header {
+    color: aliceblue;
+    text-align: center; 
+    
+}
+section {
+    background:rgb(255, 255, 255);
+    border-radius:  50px;
+    padding: 40px;
+    width:  500px;
+    margin: auto;
+    box-shadow: 10px 10px 10px rgb(11, 171, 174); 
+    position: relative;
+}
+
+div {
+    text-align: center;
+    padding:  10px;
+}
+
+footer {
+    color: rgb(243, 243, 244);
+    text-align: center;
+    font-style:  italic;
+
+}
+
+:root { /* ROOT CONFIGURAÇÕES DE CORES*/
+    --cor-primaria-success: rgb(75, 200, 138);
+    --cor-hover-success: rgb(116, 158, 137);
+    --cor-secundaria-success: rgb(0, 0, 0);
+    
+    --cor-primaria-info: rgb(246, 11, 11);
+    --cor-hover-info: rgb(116, 134, 158);
+    --cor-secundaria-info: rgb(255, 255, 255);
+
+    --cor-primaria-danger: rgb(200, 75, 75);
+    --cor-hover-danger: rgb(158, 116, 116);
+    --cor-secundaria-danger: rgb(58, 22, 22);
+}
+
+.btn { /* todos os botões config*/
+    border: none;
+    padding: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background .3s;
+    border-radius: 5px;
+    
+}
+.btn-sem { /* APENAS O BOTÃO SEM*/
+    background-color: var(--cor-primaria-success);
+    outline: none;
+    color: var(--cor-secundaria-success)
+}
+
+.btn-sem:hover {
+    background-color: var(--cor-hover-success);
+}
+
+.btn-sem:active {
+    color:var(--cor-primaria-success);
+    background-color: var(--cor-secundaria-success);
+}
+.btn-com {
+    background-color: var(--cor-primaria-info);
+    outline: none;
+    color: var(--cor-secundaria-info)
+}
+
+.btn-com:hover {
+    background-color: var(--cor-hover-info);
+}
+
+.btn-com:active {
+    color:var(--cor-primaria-info);
+    background-color: var(--cor-secundaria-info);
+}
+.btn-copiar {
+    background-color: rgb(4, 212, 84);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  .btn-pronto {
+    background-color: rgb(181, 100, 24);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  .btn-copiado {
+    background-color: rgb(0, 0, 0);
+    color: rgb(242, 6, 6);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.btn-refazer {
+    background-color: rgb(10, 10, 10);
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.btn-mais-variaveis {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  .btn-prontoComVar {
+    background-color: rgb(225, 86, 5);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  .btn-integrar {
+    background-color: rgb(5, 204, 212);
+    color: rgb(250, 250, 250);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    transition: all 0.3s ease-in-out;
+    animation: swing 0.5s ease-in-out infinite alternate;
+  }
+  @keyframes swing {
+    0% {
+      transform: translateX(1px);
+    }
+    20% {
+      transform: translateX(1px);
+    }
+    40% {
+      transform: translateX(-1px);
+    }
+  }
+  .btn-integrarBotão {
+    background-color: rgb(28, 36, 52);
+    color: rgb(250, 250, 250);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    transition: all 0.3s ease-in-out;
+    animation: swing 0.5s ease-in-out infinite alternate;
+  }
+  
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid green;
+    border-radius: 4px;
+  }
+  
+
+#VarID {
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    height: 40px;
+    margin: 10px;
+    }
+
+
+    select {
+        border-radius: 15px;
+        box-shadow: 0px 0px 10px #621c1c;
+        background-color: #ffffff;
+        border: 2px solid #000000;
+        transition: all 0.3s ease-in-out;
+
+
+
+
+      }
+      #foto {
+        width: 700px;
+        position: absolute;
+        bottom: 0;
+        top: 330px;
+        left: -50px;
+        margin: 0 auto;
+        display: block;
+          
+    }
+    #dd {
+      
+      padding: 20px;
+      text-align: center;
+      font-size: 20px;
+    }
