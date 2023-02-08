@@ -196,9 +196,8 @@ divAlinhamento.appendChild(botaoRemocao);
   }
   function obterValores() {
     let valores = [];
-    let inputTemplate = document.getElementById("descricaoTemplate");
-    let valorDoTemplate = inputTemplate.value;
-    valores.push(valorDoTemplate);   
+    
+    
     inputs.forEach(input => {
       valores.push(input.value);  
       
@@ -210,21 +209,76 @@ divAlinhamento.appendChild(botaoRemocao);
 
 
   function construirJSON() {
-   
     let select = document.getElementById("tipoTemplate");
     let selectedOption = select.value;
+    let link = document.getElementById("descricaoTemplate")
+    let linkDoc = link.value
+    
+    if (selectedOption == 'video') {
+
+    var midia = [{
+      "type": "header",
+      "parameters": [
+        {
+          "video": {
+            "link": linkDoc
+          },
+          "type": 'video'
+        }
+      ]
+    }]
+  } else if(selectedOption == 'image') {
+    var midia = [{
+      "type": "header",
+      "parameters": [
+        {
+          "image": {
+            "link": linkDoc
+          },
+          "type": 'image'
+        }
+      ]
+    }]
+  } else {
+    var midia = {
+      "type": "header",
+      "parameters": [
+        {
+          "document": {
+            "filename": "Document",
+            "link": linkDoc
+          },
+          "type": 'document'
+          }
+        ]
+    
+    }
+  }
+    
 
     let valores = obterValores();
-    let json = [];
-    valores.forEach((valor, index) => {
+
+    let inputTemplate = document.getElementById("descricaoTemplate");
+    let valorDoTemplate = inputTemplate.value;
+    if (selectedOption == 'text')  valores.push(valorDoTemplate)
+    let json = [{
+      "type": "body",
+      "parameters": []
+    }];
+    valores.forEach((valor) => {
       let objeto = {
         "text": valor,
-        "type": index == 0 ? selectedOption : "text"      
+        "type": "text"
       };
-      json.push(objeto);
+      json[0].parameters.push(objeto);
     });
+    if (selectedOption == 'text'){
+      
     return json;
-  }
+  }  else {
+    let result = json.concat(midia)
+    return result
+  }}
   
   function prontoComVar() {    
    
@@ -270,17 +324,7 @@ divAlinhamento.appendChild(botaoRemocao);
         
         "name": valorDoTemplate,
         
-        "components": [
-        
-        {
-        
-        "type": "body",
-        
-        "parameters": resultado
-        
-        }
-        
-        ]
+        "components": resultado
         
         }
         
