@@ -1,10 +1,7 @@
+var num = 1
 function comVariavel(){
-   let resp = document.getElementById('dd');
-  let img = document.createElement('img');
-  img.setAttribute('id', 'foto2');
-  img.setAttribute('src','blips.png');
-  resp.appendChild(img);
-  
+ 
+
   var footer = document.getElementById("footer");
   footer.parentNode.removeChild(footer);
     
@@ -111,7 +108,11 @@ btnPronto.classList.add("btn", "btn-prontoComVar");
 btnPronto.onclick = prontoComVar;
 divDD.appendChild(btnPronto);
 
-
+let resp = document.getElementById('dd');
+let img = document.createElement('img');
+img.setAttribute('id', 'foto2');
+img.setAttribute('src','blips.png');
+resp.appendChild(img);
 
 
   //------------
@@ -120,14 +121,18 @@ divDD.appendChild(btnPronto);
   
   let inputs = []; 
   let valores = [];
- 
+
+  function removeImage() {
+    let image = document.getElementById("foto2");
+    image.parentNode.removeChild(image);
+  } 
   
   function criaVriavel(){
-    let pergunta = document.getElementById("txt");
-
     
+    if (num == 1) removeImage()
+    num++
 
-
+    let pergunta = document.getElementById("txt");
     // Criar div para alinhar os elementos
     let divAlinhamento = document.createElement("div");
     divAlinhamento.style.display = "flex";
