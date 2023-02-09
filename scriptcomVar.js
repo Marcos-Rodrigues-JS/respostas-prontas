@@ -121,7 +121,7 @@ resp.appendChild(img);
   
   let inputs = []; 
   let valores = [];
-
+  var removida = false
   function removeImage() {
     let image = document.getElementById("foto2");
     image.parentNode.removeChild(image);
@@ -129,7 +129,10 @@ resp.appendChild(img);
   
   function criaVriavel(){
     
-    if (num == 1) removeImage()
+    if (num == 1) {
+      removeImage()
+       removida = true
+    }
     num++
 
     let pergunta = document.getElementById("txt");
@@ -292,8 +295,8 @@ divAlinhamento.appendChild(botaoRemocao);
   }}
   
   function prontoComVar() {    
-   removeImage()
-
+   
+    
     let btn = document.querySelector(".btn-mais-variaveis");
     let btnPronto = document.querySelector(".btn-prontoComVar"); 
     
@@ -317,6 +320,7 @@ divAlinhamento.appendChild(botaoRemocao);
       if (btnPronto) {
         btnPronto.remove();
       }
+      if (removida !== true) {removeImage()}
       let json = construirJSON();
       var resultado = json; 
       var completo = {
@@ -400,7 +404,7 @@ divAlinhamento.appendChild(botaoRemocao);
   
   //------------------------------INTEGRAÇÃO-------------//
   function integrar(){
-  alert(JSON.stringify(completo, null, 2))
+  //alert(JSON.stringify(completo, null, 2))
   
     const url = "https://http.msging.net/commands"
     const headerss = {
