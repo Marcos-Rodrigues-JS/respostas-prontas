@@ -292,7 +292,7 @@ divAlinhamento.appendChild(botaoRemocao);
   }}
   
   function prontoComVar() {    
-   
+   removeImage()
 
     let btn = document.querySelector(".btn-mais-variaveis");
     let btnPronto = document.querySelector(".btn-prontoComVar"); 
