@@ -1,4 +1,10 @@
 function comVariavel(){
+   let resp = document.getElementById('dd');
+  let img = document.createElement('img');
+  img.setAttribute('id', 'foto2');
+  img.setAttribute('src','blips.png');
+  resp.appendChild(img);
+  
   var footer = document.getElementById("footer");
   footer.parentNode.removeChild(footer);
     
