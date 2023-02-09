@@ -194,8 +194,18 @@ input[type="text"] {
         left: -50px;
         margin: 0 auto;
         display: block;
-          
+        border: 5px solid rgb(208, 26, 26);          
     }
+#foto2 {
+      width: 700px;
+      position: absolute;
+      bottom: 0;
+      top: 370px;
+      left: -50px;
+      margin: 0 auto;
+      display: block;
+      border: 5px solid rgb(208, 26, 26);
+}
     #dd {
       
       padding: 20px;
